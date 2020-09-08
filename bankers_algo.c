@@ -26,7 +26,6 @@ void main() {
 	for(int i=0; i<rec; i++) {
 		scanf("%d", &avail[i]);
 	}
-
 	for(int i=0; i<pro; i++) {
 		finish[i] = 0;
 	
@@ -45,12 +44,9 @@ void main() {
 				for(int j=0; j<rec; j++) {
 					if(need[i][j] <= work[j]) {
 						count = count + 1;
-				
 					}
 				}
 			
-			
-		
 			if(count == rec) {
 				finish[i] = 1;
 				safe_seq[val] = i;
@@ -66,16 +62,11 @@ void main() {
 						
 				}
 			}
-			
 			if(f==pro) {
 				break;
 			}
 		}
 		}
-		//for(int o=0; o<pro; o++) {
-		//	printf("%d, ", finish[o]);
-		//}
-	
 	}
 	if(f!=pro) {
 		printf("It is in deadlock state");
